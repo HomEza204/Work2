@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../widgets/menu.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -59,119 +60,35 @@ class HomePage extends StatelessWidget {
               )
             ],
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                margin: const EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                    border: Border.all(width: 2.0),
-                    borderRadius: BorderRadius.circular(30.0)),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 24.0, horizontal: 8.0),
-                  child: Column(
-                    children: [
-                      Image.asset("assets/images/world.png",
-                          height: 130.0, width: 150.0),
-                      const Text(
-                        "Full Access to",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                      const Text(
-                        "Pattern Lessons",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                    ],
-                  ),
-                ),
+              Menubutton (
+                text1: "Full Access to",
+                text2: "Pattern Lessons",
+                img: "assets/images/world.png",
               ),
-              Container(
-                margin: const EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                    border: Border.all(width: 2.0),
-                    borderRadius: BorderRadius.circular(30.0)),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 24.0, horizontal: 8.0),
-                  child: Column(
-                    children: [
-                      Image.asset("assets/images/bookandpen.png",
-                          height: 130.0, width: 150.0),
-                      const Text(
-                        "Unlock",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                      const Text(
-                        "All Limitations",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                    ],
-                  ),
-                ),
+              Menubutton (
+                text1: "Unlock",
+                text2: "All Limitations",
+                img: "assets/images/bookandpen.png",
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 25.0),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 25.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  margin: const EdgeInsets.all(15.0),
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 2.0),
-                      borderRadius: BorderRadius.circular(30.0)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 24.0, horizontal: 8.0),
-                    child: Column(
-                      children: [
-                        Image.asset("assets/images/greenbook.png",
-                            height: 130.0, width: 150.0),
-                        const Text(
-                          "All Topics",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16.0),
-                        ),
-                        const Text(
-                          "Available",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16.0),
-                        ),
-                      ],
-                    ),
-                  ),
+                Menubutton(
+                  text1: "All Topics",
+                  text2: "Available",
+                  img: "assets/images/greenbook.png",
                 ),
-                Container(
-                  margin: const EdgeInsets.all(15.0),
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 2.0),
-                      borderRadius: BorderRadius.circular(30.0)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 24.0, horizontal: 8.0),
-                    child: Column(
-                      children: [
-                        Image.asset("assets/images/paperandpen.png",
-                            height: 130.0, width: 150.0),
-                        const Text(
-                          "Personlized",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16.0),
-                        ),
-                        const Text(
-                          "Coaching",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16.0),
-                        ),
-                      ],
-                    ),
-                  ),
+                Menubutton(
+                  text1: "Personlized",
+                  text2: "Coaching",
+                  img: "assets/images/paperandpen.png",
                 ),
               ],
             ),
@@ -228,7 +145,12 @@ class HomePage extends StatelessWidget {
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('View all Plan',style: TextStyle(decoration: TextDecoration.underline,fontWeight: FontWeight.w500),)
+              Text(
+                'View all Plan',
+                style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    fontWeight: FontWeight.w500),
+              )
             ],
           )
         ],
